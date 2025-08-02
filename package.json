@@ -1,0 +1,19 @@
+{
+  "name": "ai-image-processor",
+  "version": "1.0.0",
+  "description": "Sophisticated AI-powered image processing web application with interactive gaming",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "start": "cd backend && python -m uvicorn main:app --host 0.0.0.0 --port 8000"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": ["ai", "image-processing", "ocr", "gaming", "react", "fastapi"],
+  "author": "AI Image Processor Team",
+  "license": "MIT"
+}
